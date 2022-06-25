@@ -1,0 +1,27 @@
+name: CountryPOS
+
+options:
+  bundleIdPrefix: ind.suzu
+  deploymentTarget:
+    iOS: 14.0
+  developmentLanguage: ja
+
+settings:
+  base:
+    MARKETING_VERSION: 0.0.1
+    CURRENT_PROJECT_VERSION: 1
+
+targets:
+  CountryPOS:
+    type: application
+    platform: iOS
+    base:
+      INFOPLIST_FILE: Country/Info.plist
+      DEVELOPMENT_LANGUAGE: jp
+    sources:
+      - CountryPOS # 「Foo」フォルダ内のファイルが自動的に追加される
+      
+  CountryPOSTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: CountryPOSTests

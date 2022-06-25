@@ -1,0 +1,21 @@
+input_dir: CountryPOS/Sources/Resources
+output_dir: CountryPOS/Sources/Generated/
+strings:
+  inputs: ja.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift5
+      output: L10n-Constants.swift
+xcassets:
+  - inputs: Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: Assets-Constants.swift
+        params:
+          enumName: Assets
+  # - inputs:
+  #     - Colors.xcassets
+  #     - Images.xcassets
+  #   outputs:
+  #     - templatePath: Resources/my-assets-custom-template.stencil
+  #       output: Assets-Constants.swift
